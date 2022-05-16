@@ -43,7 +43,7 @@ export default function Navbar() {
             <a href="#partners-id" className="block mt-4 lg:inline-block lg:mt-0 text-sm  mr-10 text-slate-100 hover:text-gray-900">
               PARTNERS
             </a>
-            <a href="#contactUs-id" className="page-scroll block mt-4 lg:inline-block lg:mt-0 text-sm  mr-10 text-slate-100 hover:text-gray-900">
+            <a href="#contactus-id" className="page-scroll block mt-4 lg:inline-block lg:mt-0 text-sm  mr-10 text-slate-100 hover:text-gray-900">
               CONTACT US
             </a>
 
