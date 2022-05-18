@@ -8,7 +8,7 @@ export default function Hero() {
         <section id="home-id">
             <div className="pt-24 text-white bg-gradient-to-r from-blue-700 to-blue-900">
 
-                <div className="ml-20 sm:ml-20  md:ml-20  lg:ml-40  grid grid-cols-1 md:grid-cols-2 gap-28">
+                <div className="ml-6 sm:ml-20  md:ml-20  lg:ml-40  grid grid-cols-1 md:grid-cols-2 gap-28">
                     <div><h1 className="text-xl">Start Investing & Earn Money</h1>
                 <h2 className="subtitle mb-5 text-5xl py-10">Say Goodbye To <br/>Idle #Money.</h2>
                
