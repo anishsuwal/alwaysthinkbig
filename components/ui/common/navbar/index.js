@@ -15,8 +15,8 @@ export default function Navbar() {
 
   return (
     <section className="sticky top-0 z-50">
-      <nav className="flex items-center justify-between flex-wrap px-36 p-3 bg-gradient-to-r from-blue-700 to-blue-800">
-        <div className="flex items-center flex-shrink-0 text-white mr-6">
+      <nav className="flex items-center justify-between flex-wrap  p-3 bg-gradient-to-r from-blue-700 to-blue-800">
+        <div className="flex items-center flex-shrink-0  text-white ml-6 lg:ml-40">
           <a href="#home-id">
           <Image 
             alt="ATB"
@@ -27,28 +27,31 @@ export default function Navbar() {
         </div>
 
         <div className="w-full block  lg:flex lg:items-center lg:w-auto ">
-          <div className="text-sm lg:flex-grow  px-4">
-            <a href="#nft-id" className="block mt-4 lg:inline-block lg:mt-0 text-sm  mr-10 text-slate-100 hover:text-gray-900">
+          <div className="text-sm lg:flex-grow  p-6 lg:ml-40">
+            <a href="#nft-id" className="block mt-4 lg:inline-block lg:mt-0 text-sm  mr-5 text-slate-100 hover:text-gray-900">
               NFTS
             </a>
-            <a href="#metaverse-id" className="block mt-4 lg:inline-block lg:mt-0 text-sm  mr-10 text-slate-100 hover:text-gray-900">
+            <a href="#metaverse-id" className="block mt-4 lg:inline-block lg:mt-0 text-sm  mr-5 text-slate-100 hover:text-gray-900">
               METAVERSE
             </a>
-            <a href="#roadmap-id" className="block mt-4 lg:inline-block lg:mt-0 text-sm  mr-10 text-slate-100 hover:text-gray-900">
+            <a href="#whitepaper-id" className="block mt-4 lg:inline-block lg:mt-0 text-sm  mr-5 text-slate-100 hover:text-gray-900">
+              WHITPAPER
+            </a>
+            <a href="#roadmap-id" className="block mt-4 lg:inline-block lg:mt-0 text-sm  mr-5 text-slate-100 hover:text-gray-900">
               ROADMAP
             </a>
-            <a href="#about-id" className="block mt-4 lg:inline-block lg:mt-0 text-sm  mr-10 text-slate-100 hover:text-gray-900">
+            <a href="#about-id" className="block mt-4 lg:inline-block lg:mt-0 text-sm  mr-5 text-slate-100 hover:text-gray-900">
               ABOUT
             </a>
-            <a href="#partners-id" className="block mt-4 lg:inline-block lg:mt-0 text-sm  mr-10 text-slate-100 hover:text-gray-900">
+            <a href="#partners-id" className="block mt-4 lg:inline-block lg:mt-0 text-sm  mr-5 text-slate-100 hover:text-gray-900">
               PARTNERS
             </a>
-            <a href="#contactus-id" className="page-scroll block mt-4 lg:inline-block lg:mt-0 text-sm  mr-10 text-slate-100 hover:text-gray-900">
+            <a href="#contactus-id" className="page-scroll block mt-4 lg:inline-block lg:mt-0 text-sm   text-slate-100 hover:text-gray-900">
               CONTACT US
             </a>
 
           </div>
-          <div className="inline-block text-sm px-4 py-2 leading-none  rounded">
+          <div className="inline-block text-sm  py-4 p-6   mr-20 leading-none  rounded">
 
             {isLoading ?
               <Button

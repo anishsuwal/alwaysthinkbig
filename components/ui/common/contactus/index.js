@@ -8,7 +8,8 @@ export default function ContactUs() {
 
     return (
         <section id="contactus-id">
-            <div  className=" px-40 p-24 " >
+            <div  className=" p-6   sm:ml-20 sm:mr-20 
+                        md:ml-20 md:mr-20 lg:ml-40 lg:mr-40  " >
                 <div><h1 className="text-5xl pb-20">Contact With US</h1>
                     <div  className="grid grid-row-6 grid-flow-col gap-4">
                         <div className="bg-white-300 rounded-lg">

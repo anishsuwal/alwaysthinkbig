@@ -6,14 +6,14 @@ export default function About() {
 
     return (
         <section id="about-id">
-            <div className=" px-40 p-24  ">
+            <div className=" p-6  ">
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-28">
                 <div>
                          <Image className="w-full aspect-video ..."
                         alt="ATB"
                         src={aboutimg}
-                        layout="fixed"
+                        layout="responsive"
                     /></div>
                     <div><h1 className="text-5xl font-semibold">About US</h1>
                

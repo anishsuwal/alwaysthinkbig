@@ -13,8 +13,9 @@ module.exports = {
     extend: {
       backgroundImage: {
         'partners': "url('../img/common-bg.jpg')",    
-        'metaverse': "url('../img/metaverse1.png')",      
+        'metaverse': "url('../img/metaverse.png')",      
         'nft': "url('../img/nft.png')",    
+        'nft-2': "url('../img/nft-2.png')",    
         'roadmap': "url('../img/roadmap.png')",      
   
 

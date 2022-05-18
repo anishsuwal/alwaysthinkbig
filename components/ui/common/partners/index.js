@@ -8,7 +8,6 @@ import partners4 from "img/coinsbit.png"
 import partners5 from "img/coingecko.png"
 import partners6 from "img/finebox.png"
 import partners7 from "img/coinmarketcap.png"
-import Button from "../button"
 
 
 
@@ -18,9 +17,9 @@ export default function Partners() {
 
     return (
         <section id="partners-id">
-            <div className=" px-40 p-6 text-white  bg-partners">
+            <div className=" p-6 text-white  bg-partners">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-28">
-                    <div>
+                    <div className=" lg:ml-40">
                         <Image className="w-full aspect-video ..."
                             alt="ATB"
                             src={countdown}
@@ -38,9 +37,11 @@ export default function Partners() {
                         <div className="text-xl">SECS</div>
 
 
-                        <div className="text-4xl font-bold col-span-4 pt-16">Smart and Secure Way
+                        <div className="   text-4xl font-bold col-span-4 pt-16">
+                            Smart and Secure Way
                             to Invest in Crypto</div>
-                        <div className="text-xl  col-span-4 pt-10">“Trust me, I get it - there is so much to absorb in the crypto space, but I am here to help you along the way.”
+                        <div className="text-xl  col-span-4 pt-10">
+                            “Trust me, I get it - there is so much to absorb in the crypto space, but I am here to help you along the way.”
                             You can invest in <strong>ATB Token</strong> directly by clicking the button below
                         </div>
                         <div className="col-span-2 pt-5"><a href="#" className="w-full flex items-center justify-center px-5 py-2 border border-transparent 
@@ -50,8 +51,8 @@ export default function Partners() {
                         </a></div>
                     </div>
 
-                </div>
-                <div className="pt-12  ">
+                </div >
+                <div className="pt-12  lg:ml-40">
                     <a className="px-2">
                         <Image
                             alt="ATB"

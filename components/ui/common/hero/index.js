@@ -6,9 +6,9 @@ export default function Hero() {
 
     return (
         <section id="home-id">
-            <div className=" px-40 p-24 text-white bg-gradient-to-r from-blue-700 to-blue-900">
+            <div className="pt-24 text-white bg-gradient-to-r from-blue-700 to-blue-900">
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-28">
+                <div className="ml-20 sm:ml-20  md:ml-20  lg:ml-40  grid grid-cols-1 md:grid-cols-2 gap-28">
                     <div><h1 className="text-xl">Start Investing & Earn Money</h1>
                 <h2 className="subtitle mb-5 text-5xl py-10">Say Goodbye To <br/>Idle #Money.</h2>
                
@@ -25,11 +25,13 @@ export default function Hero() {
                         </a>
                     </div>
                 </div></div>
-                    <div>
+                    <div className="position: block">
                          <Image className="w-full aspect-video ..."
                         alt="ATB"
                         src={logo}
-                        layout="fixed" priority
+                        layout='responsive'                      
+                        priority
+                        
                     /></div>
                 </div>
 
