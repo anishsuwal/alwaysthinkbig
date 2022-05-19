@@ -1,3 +1,5 @@
+import React, { useState } from 'react'
+import Navbutton from '../navbutton';
 
 
 import { useWeb3 } from "components/providers"
@@ -8,15 +10,25 @@ import logo from "img/white-logo.png"
 import Image from "next/image"
 import { Link } from "react-router-dom"
 
-export default function Navbar() {
-  const { connect, isLoading, requireInstall } = useWeb3()
-  const { account } = useAccount()
-  const { pathname } = useRouter()
 
+const Navbar = () => {
+    const Links =[
+      {name:"NFTS",link:"#nft-id"},
+      {name:"METAVERSE",link:"#metaverse-id"},
+      {name:"WHITPAPER",link:"#whitepaper-id"},
+      {name:"ROADMAP",link:"#roadmap-id"},
+      {name:"ABOUT",link:"#about-id"},
+      {name:"PARTNERS",link:"#partners-id"},
+      {name:"CONTACT US",link:"#contactus-id"},
+
+    ];
+    let [open,setOpen]=useState(false);
   return (
-    <section className="sticky top-0 z-50">
-      <nav className="flex items-center justify-between flex-wrap  p-3 bg-gradient-to-r from-blue-700 to-blue-800">
-        <div className="flex items-center flex-shrink-0  text-white ml-6 lg:ml-40">
+    <div className='shadow-md w-full  top-0 left-0 sticky  z-50'>
+      <div className='md:flex items-center justify-between bg-gradient-to-r from-blue-600 to-blue-700 py-4'>
+      <div className='font-bold text-2xl cursor-pointer flex items-center font-[Poppins] 
+      text-gray-800'>
+        <div className="flex items-center flex-shrink-0  text-white ml-6 lg:ml-40 ">
           <a href="#home-id">
           <Image 
             alt="ATB"
@@ -25,68 +37,36 @@ export default function Navbar() {
           />
           </a>
         </div>
+        
+      </div>
+      
+      <div onClick={()=>setOpen(!open)} className='text-3xl absolute right-8 top-6 cursor-pointer md:hidden'>
+      <button name={open ? 'close':'menu'}><div className="w-5 h-1 bg-gray-600 mb-1"></div>
+      <div className="w-5 h-1 bg-gray-600 mb-1"></div>
+      <div className="w-5 h-1 bg-gray-600"></div></button>
+      </div>
 
-        <div className="w-full block  lg:flex lg:items-center lg:w-auto ">
-          <div className="text-sm lg:flex-grow  p-6 lg:ml-40">
-            <a href="#nft-id" className="block mt-4 lg:inline-block lg:mt-0 text-sm  mr-5 text-slate-100 hover:text-gray-900">
-              NFTS
-            </a>
-            <a href="#metaverse-id" className="block mt-4 lg:inline-block lg:mt-0 text-sm  mr-5 text-slate-100 hover:text-gray-900">
-              METAVERSE
-            </a>
-            <a href="#whitepaper-id" className="block mt-4 lg:inline-block lg:mt-0 text-sm  mr-5 text-slate-100 hover:text-gray-900">
-              WHITPAPER
-            </a>
-            <a href="#roadmap-id" className="block mt-4 lg:inline-block lg:mt-0 text-sm  mr-5 text-slate-100 hover:text-gray-900">
-              ROADMAP
-            </a>
-            <a href="#about-id" className="block mt-4 lg:inline-block lg:mt-0 text-sm  mr-5 text-slate-100 hover:text-gray-900">
-              ABOUT
-            </a>
-            <a href="#partners-id" className="block mt-4 lg:inline-block lg:mt-0 text-sm  mr-5 text-slate-100 hover:text-gray-900">
-              PARTNERS
-            </a>
-            <a href="#contactus-id" className="page-scroll block mt-4 lg:inline-block lg:mt-0 text-sm   text-slate-100 hover:text-gray-900">
-              CONTACT US
-            </a>
+      <ul className={`md:flex md:items-center md:pb-0 pb-12 absolute mr-10
+       md:static   md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9
+        transition-all duration-500 ease-in ${open ? 'top-20 bg-blu-900 ':'top-[-490px] bg-transparent'}`}>
+        {
+          Links.map((link)=>(
+            <li key={link.name} className='md:ml-8 -400 text-sm md:my-0 my-7'>
+              <a href={link.link} className='text-white hover:text-gray-400 duration-500'>{link.name}</a>
+            </li>
+          ))
+        }
 
-          </div>
-          <div className="inline-block text-sm  py-4 p-6   mr-20 leading-none  rounded">
-
-            {isLoading ?
-              <Button
-                disabled={true}
-                onClick={connect}>
-                Loading...
-              </Button> :
-              account.data ?
-                <Button
-                  hoverable={false}
-                  className="cursor-default">
-                  Hi there {account.isAdmin && "Admin"}
-                </Button> :
-                requireInstall ?
-                  <Button
-                    onClick={() => window.open("https://metamask.io/download.html", "_blank")}>
-                    Install Metamask
-                  </Button> :
-                  <Button
-                    onClick={connect}>
-                    Connect
-                  </Button>
-            }
-          </div>
-
-        </div>
-      </nav>
-      {account.data &&
-        !pathname.includes("/marketplace") &&
-        <div className="flex justify-end bg-gradient-to-r from-blue-700 to-blue-900 pt-2 pr-40">
-          <div className="text-white bg-gradient-to-r from-green-500 to-green-400 rounded-md shadow-md p-3">
-            {account.data}
-          </div>
-        </div>
-      }
-    </section>
+        <Navbutton>
+          Login
+        </Navbutton>
+       
+      </ul>
+      </div>
+    </div>
+    
   )
+  
 }
+
+export default Navbar

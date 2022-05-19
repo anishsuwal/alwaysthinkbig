@@ -1,3 +1,4 @@
+import Navbutton from "./navbutton"
 
 
 
@@ -16,3 +17,4 @@ export {default as Partners} from "./partners"
 export {default as About} from "./about"
 export {default as Metaverse} from "./metaverse"
 export {default as Whitepaper} from "./whitepaper"
+export {default as Navbutton} from "./navbutton"
