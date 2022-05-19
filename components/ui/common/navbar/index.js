@@ -48,11 +48,11 @@ const Navbar = () => {
 
       <ul className={`md:flex md:items-center md:pb-0 pb-12 absolute mr-10
        md:static   md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9
-        transition-all duration-500 ease-in ${open ? 'top-20 bg-blu-900 ':'top-[-490px] bg-transparent'}`}>
+        transition-all duration-500 ease-in ${open ? 'top-20 bg-blue-900 ':'top-[-490px] bg-transparent'}`}>
         {
           Links.map((link)=>(
             <li key={link.name} className='md:ml-8 -400 text-sm md:my-0 my-7'>
-              <a href={link.link} className='text-white hover:text-gray-400 duration-500'>{link.name}</a>
+              <a href={link.link} onClick={() => setOpen=false} className='text-white hover:text-gray-400 duration-500'>{link.name}</a>
             </li>
           ))
         }
